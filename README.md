@@ -1,59 +1,53 @@
-# ProyectoAngularAied
+# Proyecto: TodoTecno — Gestión de Productos
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.11.
+*Nombre del repositorio:* proyecto-angular-aied  
+*Tipo de app:* PWA Angular de ecommerce (local)  
+*Desarrollador:* Lucas Cecenarro y Nicolas Najsyk
 
-## Development server
+---
 
-To start a local development server, run:
+## Funcionalidades actuales
 
-```bash
+-  Autenticación de usuarios (login y registro)
+-  Catálogo de productos (con filtros por nombre, categoría y descripción)
+-  Carrito de compras persistente por usuario (con localStorage)
+-  Facturación automática: calcula total en ARS y USD
+-  Exportación de facturas a *PDF* y *Excel*
+-  Backend con Node.js
+-  Estética profesional y diseño inspirado en sitios reales
+-  Navbar con íconos y enlaces de navegación
+-  Sección de contacto con enlaces a redes sociales
+
+---
+
+## Tecnologías utilizadas
+
+- *Angular 17* (standalone components + Vite)
+- *SCSS* para estilos personalizados
+- *localStorage* para persistencia de carrito
+- *jsPDF* y *xlsx* para exportación de reportes
+- *API del BCRA* para tipo de cambio oficial USD/ARS
+
+---
+
+## Cómo iniciar el proyecto
+
+bash
+npm install
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+> Accedé desde http://localhost:4200
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Estructura de carpetas principal
 
-```bash
-ng generate component component-name
-```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+src/
+├── app/
+│   ├── components/         # Componentes visuales (navbar, preview factura, etc.)
+│   ├── models/             # Interfaces como Producto, Usuario, ItemFactura
+│   ├── pages/              # Secciones completas: productos, factura, contacto, login...
+│   ├── pipes/              # Pipes personalizados (ej. filtroProducto)
+│   ├── services/           # Lógica de negocio: productos, sesión, carrito
+└── styles/                 # Estilos globales (ej. tipografía Montserrat)
